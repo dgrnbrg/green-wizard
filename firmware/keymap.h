@@ -1,5 +1,5 @@
 /*
-Copyright 2018-2020 <Pierre Constantineau>
+Copyright (C) 2020, Jocelyn Turcotte <turcotte.j@gmail.com>
 
 3-Clause BSD License
 
@@ -19,20 +19,24 @@ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR P
 */
 #include <stdint.h>
 #include "hid_keycodes.h"
-#include "hardware_variants.h"
 #include "keyboard_config.h"
 #include "advanced_keycodes.h"
+#define MAX_NO_LAYERS 5 //needs to be one greater than the number of layers implimented. Too large of a number will cause crashing due to dynamic memory limits.
 #include "Key.h"
 #include <array>
 
 #ifndef KEYMAP_H
 #define KEYMAP_H
 
-#define _L0  0
-#define _L1  1
-#define _L2  2
-#define _L3  3
+#define _L0 0 // Base layer
 
+#define KMQWERTY    MC(KC_A)
+#define KMDVORAK    MC(KC_B)
+#define USER_MACRO_FUNCTION   0 
+void process_user_macros(uint16_t macroid);
+
+extern void addStringToQueue(const char* str);
+extern void addKeycodeToQueue(const uint16_t keycode);
 void setupKeymap();
 extern std::array<std::array<Key, MATRIX_COLS>, MATRIX_ROWS> matrix;
 
