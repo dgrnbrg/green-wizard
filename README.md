@@ -1,3 +1,5 @@
+Includes the greenwizard firmware for our special kinesis keyboards. IYKYK.
+
 # BlueMicro Firmware  [![Current Version](https://img.shields.io/github/v/tag/jpconstantineau/BlueMicro_BLE)](https://github.com/jpconstantineau/BlueMicro_BLE/tags)  ![Build on Docker](https://github.com/jpconstantineau/BlueMicro_BLE/workflows/Build%20on%20Docker/badge.svg)
 
 **A Keyboard Firmware for nRF52832 and nRF52840 Boards**
