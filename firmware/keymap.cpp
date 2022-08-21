@@ -75,7 +75,14 @@ void setupKeymapQwerty() {
             matrix[row][col].addActivation(_L0, Method::PRESS, qwerty[row][col]);
         }
     }
-    matrix[0][2].addActivation(_L0, Method::DT_TAP, KC_ESC); 
+    //matrix[0][2].addActivation(_L0, Method::DT_TAP, KC_ESC); 
+    if (keyboard_config.BLEProfile == 1) {
+        // This is overiding printscreen
+        // see keyboard_config.h to xref--start with the lower matrix for the indices, then go to the upper macro for the logical layout
+        matrix[14][5].addActivation(_L0, Method::MT_TAP, BLEPROFILE_2); 
+    } else {
+        matrix[14][5].addActivation(_L0, Method::MT_TAP, BLEPROFILE_1); 
+    }
 }
 
 void setupKeymapDvorak() {
@@ -113,11 +120,13 @@ void setupKeymapDvorak() {
 
         }
     }
-    //if (keyboard_config.BLEProfile == 1) {
-    //    matrix[14][5].addActivation(_L0, Method::MT_TAP, BLEPROFILE_2); 
-    //} else {
-    //    matrix[14][5].addActivation(_L0, Method::MT_TAP, BLEPROFILE_1); 
-    //}
+    if (keyboard_config.BLEProfile == 1) {
+        // This is overiding printscreen
+        // see keyboard_config.h to xref--start with the lower matrix for the indices, then go to the upper macro for the logical layout
+        matrix[14][5].addActivation(_L0, Method::MT_TAP, BLEPROFILE_2); 
+    } else {
+        matrix[14][5].addActivation(_L0, Method::MT_TAP, BLEPROFILE_1); 
+    }
 };
 
 void setupKeymap() {
