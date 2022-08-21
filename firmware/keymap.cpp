@@ -49,7 +49,7 @@ void setupKeymapQwerty() {
          KC_ESC,    KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,
          KC_EQL,     KC_1,    KC_2,    KC_3,    KC_4,    KC_5,
          KC_TAB,     KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,
-         KC_CAPS,    KC_A,    KC_S,    KC_D,    KC_F,    KC_G,
+         KC_LCTRL,   KC_A,    KC_S,    KC_D,    KC_F,    KC_G,
          KC_LSFT,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,
               KC_GRV,  KC_INS,  KC_LEFT, KC_RGHT,
         // left thumb
@@ -75,6 +75,7 @@ void setupKeymapQwerty() {
             matrix[row][col].addActivation(_L0, Method::PRESS, qwerty[row][col]);
         }
     }
+    matrix[0][2].addActivation(_L0, Method::DT_TAP, KC_ESC); 
 }
 
 void setupKeymapDvorak() {
@@ -86,7 +87,7 @@ void setupKeymapDvorak() {
          KC_TAB, KC_QUOT, KC_COMM,  KC_DOT,    KC_P,    KC_Y,
          KC_CAPSLOCK,     KC_A,    KC_O,    KC_E,    KC_U,    KC_I,
          KC_LSHIFT, KC_SCLN,    KC_Q,    KC_J,    KC_K,    KC_X,
-             KC_GRV,  KC_BSLASH,  KC_LEFT, KC_RIGHT,
+             KC_GRV,  KC_LALT,  KC_LEFT, KC_RIGHT,
         // left thumb
                               KC_LGUI, KC_LALT,
                                        KC_HOME,
@@ -112,6 +113,11 @@ void setupKeymapDvorak() {
 
         }
     }
+    //if (keyboard_config.BLEProfile == 1) {
+    //    matrix[14][5].addActivation(_L0, Method::MT_TAP, BLEPROFILE_2); 
+    //} else {
+    //    matrix[14][5].addActivation(_L0, Method::MT_TAP, BLEPROFILE_1); 
+    //}
 };
 
 void setupKeymap() {
