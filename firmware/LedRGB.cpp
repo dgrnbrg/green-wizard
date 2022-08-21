@@ -155,4 +155,3 @@ void suspendRGB(void)
   pixels.show();   // Send the updated pixel colors to the hardware.
   #endif
 }
-

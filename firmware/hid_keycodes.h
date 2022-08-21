@@ -631,4 +631,3 @@ enum hid_keyboard_keypad_usage {
 #define EXPAND_ALT_CODE(CODE1, CODE2, CODE3, CODE4)  addKeycodeToQueue(CODE1,BIT_LALT); addKeycodeToQueue(CODE2,BIT_LALT); addKeycodeToQueue(CODE3,BIT_LALT); addKeycodeToQueue(CODE4,BIT_LALT);
 
 #endif /* HID_KEYCODES_H */
-

@@ -174,4 +174,3 @@ void BlueMicro_tone::playNoteNow(int frequency, int duration)
  // PersistentState*  BlueMicro_tone::config = NULL;
   //DynamicState*  BlueMicro_tone::status  = NULL; 
 #endif
-

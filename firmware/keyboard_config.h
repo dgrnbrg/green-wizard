@@ -28,7 +28,7 @@ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR P
 #define KEYBOARD_SIDE MASTER
 #define BATTERY_TYPE = BATT_LIPO;
 
-//#define IS_DAVID 1
+#define IS_DAVID 1
 #ifdef IS_DAVID
 #define DEVICE_NAME_M "Green Dvorak Wizard" /**< Name of device. Will be included in the advertising data. */
 #else

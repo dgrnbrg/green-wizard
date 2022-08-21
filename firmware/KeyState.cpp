@@ -100,5 +100,3 @@ KeyState::State KeyState::getState() const
 {
     return state;
 }
-
-

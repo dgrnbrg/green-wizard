@@ -17,6 +17,7 @@ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR P
 
 */
 #include "keymap.h"
+#include "datastructures.h"
 
 extern PersistentState keyboardconfig;
 
