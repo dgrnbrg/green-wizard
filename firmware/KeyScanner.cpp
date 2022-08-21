@@ -68,6 +68,7 @@ bool KeyScanner::scanMatrix(const int& currentState,unsigned long currentMillis,
             matrix[row][col].clear(currentMillis);
             timestamps[row][col] = 0;
         }
+        return true;
 }
 
 /**************************************************************************************************************************/

@@ -119,6 +119,7 @@ uint8_t Battery::mvToPercent(uint32_t mvolts)
       return (uint8_t) 10 + (uint8_t)((mvolts * 15)/100);  // thats mvolts /6.66666666
     break;    
   } 
+  return 50;
 }
 /**************************************************************************************************************************/
 void Battery::updateBattery(void)
@@ -156,4 +157,3 @@ uint32_t Battery::vbat_mv = 0;
 uint32_t Battery::vbat_vdd = 0;
 uint8_t Battery::vbat_per = 0;
 uint8_t Battery::batt_type = BATT_UNKNOWN;
-
