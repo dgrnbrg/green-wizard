@@ -18,6 +18,8 @@ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR P
 */
 #include "keymap.h"
 
+extern PersistentState keyboardconfig;
+
 std::array<std::array<Key, MATRIX_COLS>, MATRIX_ROWS> matrix =
     KEYMAP2ARRAY(KEYMAP(
          KC_NO,    KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,
